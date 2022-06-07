@@ -31,9 +31,10 @@ public class druga extends AppCompatActivity {
         prvi.popuni();
 
         Toast.makeText(this, "Uspješno ste prijavljeni!", Toast.LENGTH_SHORT).show();
-
         Intent intent = getIntent();
         String name = intent.getStringExtra("ime");
+
+
 
         TextView prijavljeni = (TextView) findViewById(R.id.koje);
         prijavljeni.setText("Prijavljeni ste kao " + name);
@@ -44,30 +45,51 @@ public class druga extends AppCompatActivity {
         TextView prog=(TextView) findViewById(R.id.prog);
         TextView tzk=(TextView) findViewById(R.id.tzk);
         TextView mreze=(TextView) findViewById(R.id.mreze);
-        hrv.append("                    "+prvi.prosjekHrv);
-        mat.append("                       "+prvi.prosjekMat);
-        eng.append("                    "+prvi.prosjekEng);
-        fiz.append("                                  "+prvi.prosjekFiz);
-        prog.append("                   "+prvi.prosjekProg);
-        tzk.append("                                     "+prvi.prosjekTzk);
-        mreze.append("              "+prvi.prosjekMreze);
+        hrv.append("                  "+prvi.prosjekHrv);
+        mat.append("                     "+prvi.prosjekMat);
+        eng.append("                  "+prvi.prosjekEng);
+        fiz.append("                               "+prvi.prosjekFiz);
+        prog.append("                 "+prvi.prosjekProg);
+        tzk.append("                                  "+prvi.prosjekTzk);
+        mreze.append("           "+prvi.prosjekMreze);
     }
     Ucenik prvi=new Ucenik();
 
     public void sljedeca(View v){
         Intent i=new Intent(this,stats.class);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("ime");
+        i.putExtra("ime",name);
+
+        i.putExtra("oHrv",""+prvi.prosjekHrv);
+        i.putExtra("oMat",""+prvi.prosjekMat);
+        i.putExtra("oEng",""+prvi.prosjekEng);
+        i.putExtra("oFiz",""+prvi.prosjekFiz);
+        i.putExtra("oProg",""+prvi.prosjekProg);
+        i.putExtra("oTzk",""+prvi.prosjekTzk);
+        i.putExtra("oMreze",""+prvi.prosjekMreze);
+
         startActivity(i);
+
     }
     public void previousActivity(View v) {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
 
     }
+    boolean stanje=false;
     public void ukupniProsjek(View view){
         TextView zavrsni=(TextView) findViewById(R.id.prosjek);
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(2);
-        zavrsni.setText("Završni prosjek: "+df.format(prvi.ukupniProsjek));
+        if(stanje==false){
+            zavrsni.setText("Završni prosjek: "+df.format(prvi.ukupniProsjek));
+            stanje=true;
+        }
+        else{
+            zavrsni.setText("");
+            stanje=false;
+        }
     }
 
     public void onClick1(View view) {
