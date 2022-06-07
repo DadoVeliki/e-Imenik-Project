@@ -40,7 +40,7 @@
         android:id="@+id/username"
         android:layout_width="350sp"
         android:layout_height="wrap_content"
-        android:text="david.trstenjak2@skole.hr"
+        android:text=""
         android:fontFamily="Courier New"
         android:textColor="#ffffff"
         android:singleLine="false"
@@ -73,7 +73,7 @@
         android:id="@+id/password"
         android:layout_width="350sp"
         android:layout_height="wrap_content"
-        android:text="123"
+        android:text=""
         android:fontFamily="Courier New"
         android:textColor="#ffffff"
         android:singleLine="false"
@@ -101,7 +101,7 @@
 
     <TextView
         android:id="@+id/napomena"
-        android:layout_width="350sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/login"
         android:layout_centerHorizontal="true"
