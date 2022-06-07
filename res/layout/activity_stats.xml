@@ -31,7 +31,7 @@
         android:layout_marginBottom="30sp"
         android:backgroundTint="#ff0000"
         android:onClick="prosla"
-        android:text="<-" />
+        android:text="BACK" />
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
@@ -68,4 +68,13 @@
         android:layout_toRightOf="@+id/koje"
         android:layout_alignBottom="@+id/koje"
         />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="1920px"
+        android:layout_alignTop="@+id/koje"
+        android:layout_marginTop="50dp"
+        />
+
 </RelativeLayout>
