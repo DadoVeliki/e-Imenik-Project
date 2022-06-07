@@ -1,6 +1,7 @@
 package com.example.projekt_david_trstenjak;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Ucenik {
 
@@ -11,19 +12,20 @@ public class Ucenik {
     public String[] programiranje=new String[5];
     public String[] tzk=new String[5];
     public String[] mreze=new String[5];
-    Random ran=new Random();
+    //Random ran=new Random();
     public float ukupnoHrv=0,ukupnoMat=0,ukupnoEng=0,ukupnoFiz=0,ukupnoProg=0,ukupnoTzk=0,ukupnoMreze=0;
     public float prosjekHrv,prosjekMat,prosjekEng,prosjekFiz,prosjekProg,prosjekTzk,prosjekMreze;
     public float ukupniZbroj=0;
     public float ukupniProsjek=0;
     public void popuni(){
         for(int i=0;i<5;i++){
+            ThreadLocalRandom ran = ThreadLocalRandom. current();
             int broj1=ran.nextInt(5)+1;
             int broj2=ran.nextInt(5)+1;
-            int broj3=ran.nextInt(5)+1;
+            int broj3=ran.nextInt(3,6);
             int broj4=ran.nextInt(5)+1;
             int broj5=ran.nextInt(5)+1;
-            int broj6=ran.nextInt(5)+1;
+            int broj6=ran.nextInt(4,6);
             int broj7=ran.nextInt(5)+1;
             hrvatski[i]=""+broj1;
             matematika[i]=""+broj2;
