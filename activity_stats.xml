@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:id="@+id/table_dialog_root"
+    android:background="#003a76">
+    <TextView
+        android:id="@+id/naziv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="e-Imenik"
+        android:fontFamily="sans-serif"
+        android:textColor="#ffffff"
+        android:singleLine="true"
+        android:textSize="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:layout_marginLeft="15sp"
+        />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/logout"
+        android:layout_marginBottom="30sp"
+        android:backgroundTint="#ff4040"
+        android:onClick="prosla"
+        android:text="BACK" />
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30sp"
+        android:backgroundTint="#ff4040"
+        android:onClick="previousActivity"
+
+        android:text="LOGOUT" />
+
+    <TextView
+        android:id="@+id/koje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logout"
+        android:layout_marginLeft="35sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="-46dp"
+        android:fontFamily="Ariel"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/ime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/koje"
+        android:layout_marginLeft="35sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="-56dp"
+        android:fontFamily="Ariel"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_alignTop="@+id/koje"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/koje"
+        android:adjustViewBounds="true"
+        android:maxWidth="70dip"
+        android:maxHeight="70dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/david" />
+
+    <TextView
+        android:id="@+id/natpis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/koje"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif"
+        android:singleLine="true"
+        android:text="GRAF PROSJEKA OCJENA"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="509dp"
+        android:layout_alignTop="@+id/koje"
+        android:layout_marginTop="148dp" />
+
+</RelativeLayout>
